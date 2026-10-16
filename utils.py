@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 def crear_tablero(tamano=10):
-    return np.full((tamano, tamano), ' ') #Tablero de 10x10 con espacios como casillas, ya que con " " se veia muy saturado
+    return np.full((tamano, tamano), ' ') #Tablero de 10x10 con espacios como casillas, ya que con "_" se veia muy saturado
 
 def colocar_barco(barco, tablero): #Barco es una lista de coordenadas y tablero es la matriz donde las va a dibujar
     for fila, col in barco:

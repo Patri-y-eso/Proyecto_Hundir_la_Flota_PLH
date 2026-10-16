@@ -60,6 +60,3 @@ El código está dividido en dos archivos principales para mantener una arquitec
    *   `X` : Impacto en un barco enemigo (Tocado/Hundido).
    *   `O` : Tus barcos sanos (solo visibles en tu tablero).
 4. Tras tu disparo, la máquina responderá automáticamente atacando tus coordenadas.
-
----
-*Desarrollado como proyecto final de Python.*
