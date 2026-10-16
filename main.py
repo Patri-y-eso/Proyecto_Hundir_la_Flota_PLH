@@ -18,7 +18,7 @@ def jugar(): #Función principal
     print("\nEste es tu tablero inicial con tus barcos desplegados:")
     print(tablero_jugador) #Muestra mi tablero
     
-    impactos_objetivo = 16 #La suma de los 6 barcos (3x2 + 2x3 + 1x4 = 16),e e primero en lograr 16 impactos a barcos, gana
+    impactos_objetivo = 16 #La suma de los 6 barcos (3x2 + 2x3 + 1x4 = 16),els primero en lograr 16 impactos a barcos, gana
     puntos_jugador = 0
     puntos_maquina = 0
                       #Marcadores comienzan a 0
