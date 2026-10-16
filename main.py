@@ -5,7 +5,7 @@ def mostrar_oculto(tablero): #aquí se oculta el tablero enemigo para no ver sus
     t_oculto = tablero.copy() #Copia el tablero porque si no modificariamos el tablero del rival y lo dejariamos vacío
     t_oculto[t_oculto == 'O'] = ' ' #Cambia "O" por espacios
     print(t_oculto) #Muestra el tablero oculto
-
+ 
 def jugar(): #Función principal
     print("🌊 ¡BIENVENIDO A HUNDIR LA FLOTA! 🌊")
     

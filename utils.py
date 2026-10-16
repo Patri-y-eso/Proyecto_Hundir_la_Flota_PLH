@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 def crear_tablero(tamano=10):
-    return np.full((tamano, tamano), ' ') #Tablero de 10x10 con espacios como casillas, ya que con "_" se veia muy saturado
+    return np.full((tamano, tamano), ' ') #Tablero de 10x10 con espacios como casillas, ya que con " " se veia muy saturado
 
 def colocar_barco(barco, tablero): #Barco es una lista de coordenadas y tablero es la matriz donde las va a dibujar
     for fila, col in barco:
@@ -10,7 +10,7 @@ def colocar_barco(barco, tablero): #Barco es una lista de coordenadas y tablero 
     return tablero
 
 def crear_barco(eslora, tablero): #Eslora es el tamaño del barco
-    tamano = tablero.shape[0] #Shape del tablero es (10,10), por lo tanto, tamano erá 10
+    tamano = tablero.shape[0] #Shape del tablero es (10,10), por lo tanto, tamano será 10
     while True:
         orientacion = random.choice(['H', 'V']) #Elige de manera aleatoria si el barco va a estar colocado en horizonal o vertical
         if orientacion == 'H':
@@ -26,7 +26,7 @@ def crear_barco(eslora, tablero): #Eslora es el tamaño del barco
         invalido = False #Supone que el barco es válido
         for f, c in barco: #f = fila, c = columna
             for df in [-1, 0, 1]: #df = diferencia de fila
-                for dc in [-1, 0, 1]: #dc = diferencia de columna, esta linea y la anterior crean una cuadricula 3x3 al rededor de la casilla que comprobamos
+                for dc in [-1, 0, 1]: #dc = diferencia de columna, esta linea y la anterior crean una cuadricula 3x3 alrededor de la casilla que comprobamos
                     vecina_f = f + df 
                     vecina_c = c + dc # esta linea y la anterior crean las verdaderas coordenadas de la casilla vecina que debe estar vacia
                     if 0 <= vecina_f < tamano and 0 <= vecina_c < tamano: #comprueba que la vecina no está fuera del tablero
@@ -37,7 +37,7 @@ def crear_barco(eslora, tablero): #Eslora es el tamaño del barco
                     break
             if invalido:
                 break #Los tres break es para que rompa cada bucle interno y vuelva al while principal
-                
+                 
         if not invalido:
             return barco #Si no es invalido, todas las vecinas están vacías y devuelve las coordenadas del barco válido
 
